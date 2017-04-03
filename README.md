@@ -1,12 +1,16 @@
 # libgonet
 C++ network library based on `libgo`.
 
-下载 libgo
+更新下载 libgo
 
 git submodule update --init
 
+
 #boost 安装配置
-1 下载 wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
+
+1 下载 
+
+wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
 
 2 编译 配置环境
 

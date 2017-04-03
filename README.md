@@ -1,8 +1,30 @@
 # libgonet
 C++ network library based on `libgo`.
+---下载 libgo
+git submodule update --init
+
+#boost 安装配置
+1 下载 wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
+2 编译 配置环境
+tar -zxvf boost_1_61_0.tar.gz
+./bootstrap.sh --prefix=/usr/local
+./b2 install --with=all
+3 修改环境变量
+
+修改.bash_profile文件
+cd /root
+vi .bash_profile
+---------------------------------------------
+PATH=$PATH:$HOME/bin:/usrb64:/usrb:/usr/localb
+export PATH     
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usrb64:/usrb:/usr/localb
+export LD_LIBRARY_PATH
+-------------------------------------------------------
+修改立即生效
+source .bash_profile
+
 
 ## Benchmark
-
 性能测试步骤(先安装boost1.59+)：
 
     $ mkdir build -p && cd build

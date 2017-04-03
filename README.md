@@ -17,14 +17,18 @@ tar -zxvf boost_1_61_0.tar.gz
 3 修改环境变量
 
 修改.bash_profile文件
+
 cd /root
+
 vi .bash_profile
+
 ---------------------------------------------
 PATH=$PATH:$HOME/bin:/usrb64:/usrb:/usr/localb
 export PATH     
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usrb64:/usrb:/usr/localb
 export LD_LIBRARY_PATH
 -------------------------------------------------------
+
 修改立即生效
 source .bash_profile
 

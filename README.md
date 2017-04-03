@@ -5,10 +5,15 @@ git submodule update --init
 
 #boost 安装配置
 1 下载 wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
+
 2 编译 配置环境
+
 tar -zxvf boost_1_61_0.tar.gz
+
 ./bootstrap.sh --prefix=/usr/local
+
 ./b2 install --with=all
+
 3 修改环境变量
 
 修改.bash_profile文件

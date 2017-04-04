@@ -26,12 +26,13 @@ cd /root
 
 vi .bash_profile
 
----------------------------------------------
+结尾添加
+
 PATH=$PATH:$HOME/bin:/usr/lib64:/usr:/usr/local
 export PATH     
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64:/usr:/usr/local
 export LD_LIBRARY_PATH
--------------------------------------------------------
+
 
 修改立即生效
 source .bash_profile
@@ -47,6 +48,7 @@ source .bash_profile
     $ make -j4
 
 ##编译test需要静态库，提示无法找到pthread库 需要安装glibc -----如果已经安装或者不使用-static编译忽略
+
 yum install glibc-static
  
 启动服务端：

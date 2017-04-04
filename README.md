@@ -8,20 +8,18 @@ git submodule update --init
 
 #boost 安装配置
 
-1 下载 
+1 下载 boost_1_61
 
 wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
 
-2 编译 配置环境
-
+2 编译 配置环境 （centos7）
 tar -zxvf boost_1_61_0.tar.gz
 
 ./bootstrap.sh --prefix=/usr/local
 
 ./b2 install --with=all
 
-3 修改环境变量
-
+3 修改环境变量 (没有root权限下)
 修改.bash_profile文件
 
 cd /root
@@ -29,15 +27,14 @@ cd /root
 vi .bash_profile
 
 ---------------------------------------------
-PATH=$PATH:$HOME/bin:/usrb64:/usrb:/usr/localb
+PATH=$PATH:$HOME/bin:/usr/lib64:/usr:/usr/local
 export PATH     
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usrb64:/usrb:/usr/localb
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib64:/usr:/usr/local
 export LD_LIBRARY_PATH
 -------------------------------------------------------
 
 修改立即生效
 source .bash_profile
-
 
 ## Benchmark
 性能测试步骤(先安装boost1.59+)：
@@ -48,7 +45,10 @@ source .bash_profile
     $ sudo make install
     $ cd ../test/test
     $ make -j4
-  
+
+##编译test需要静态库，提示无法找到pthread库 需要安装glibc -----如果已经安装或者不使用-static编译忽略
+yum install glibc-static
+ 
 启动服务端：
 
     $ ./bmserver.t

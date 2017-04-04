@@ -8,7 +8,7 @@ LINK=-L../../build -L../../build/third_party/libgo -L../../third_party/libgo/thi
 #CFLAGS+=-DPROFILE=1
 #LINK+=-lprofiler -lunwind
 
-LINK+=-lpthread -lssl -lcrypto -static
+LINK+=-lpthread -lssl -lcrypto 
 TARGET=$(patsubst %.cpp, %.t, $(wildcard *.cpp))
 
 all : $(TARGET)

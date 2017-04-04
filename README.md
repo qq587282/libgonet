@@ -13,6 +13,7 @@ git submodule update --init
 wget https://nchc.dl.sourceforge.net/project/boost/boost/1.61.0/boost_1_61_0.tar.gz
 
 2 编译 配置环境 （centos7）
+
 tar -zxvf boost_1_61_0.tar.gz
 
 ./bootstrap.sh --prefix=/usr/local
@@ -20,6 +21,7 @@ tar -zxvf boost_1_61_0.tar.gz
 ./b2 install --with=all
 
 3 修改环境变量 (没有root权限下)
+
 修改.bash_profile文件
 
 vi ~/.bash_profile
@@ -45,7 +47,7 @@ source .bash_profile
     $ cd ../test/test
     $ make -j4
 
-##编译test需要静态库，提示无法找到pthread库 需要安装glibc -----如果已经安装或者不使用-static编译忽略
+##编译test有些项目需要使用glibc静态库，提示无法找到库 需要安装glibc-static -----如果已经安装或者不使用-static编译请忽略
 
 yum install glibc-static
  

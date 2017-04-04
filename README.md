@@ -22,9 +22,7 @@ tar -zxvf boost_1_61_0.tar.gz
 3 修改环境变量 (没有root权限下)
 修改.bash_profile文件
 
-cd /root
-
-vi .bash_profile
+vi ~/.bash_profile
 
 结尾添加
 
